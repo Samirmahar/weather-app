@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e0f7fa;
+  text-align: center;
+  padding: 50px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  font-size: 16px;
+}
+
+#weatherResult {
+  margin-top: 20px;
+}
+/* Video background */
+#background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6); /* darken video for better text contrast */
+  z-index: -1; /* behind everything */
+}
+
+/* Override body styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif; /* keep Arial as fallback */
+  background: #121212; /* darker background fallback */
+  color: white;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Override container to match weather-card style */
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem 1.5rem;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  width: 90%;
+}
+
+/* Input and button tweaks */
+input, button {
+  width: 70%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #1e90ff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+button:hover {
+  background: #3ea0ff;
+}
+
+/* Weather results style */
+#weatherResult {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
